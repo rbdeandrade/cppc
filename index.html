@@ -163,7 +163,7 @@
     
     <div class="header-layout">
         <div class="header-left">
-            <img src="img/cppc.jpg" alt="Logo CPPC e pombas">
+            <img src="img/cppc.jpg" alt="Logo do Conselho Português para a Paz e Cooperação">
         </div>
         <div class="header-right">
             <h1>Ficha de <strong>Aderente</strong></h1>
@@ -177,7 +177,7 @@
         </div>
     </div>
 
-    <form>
+    <form action="#" method="post">
         <div class="form-group">
             <label>Nome</label>
             <input type="text" name="nome">
@@ -192,9 +192,9 @@
             <div class="col form-group col-postal">
                 <label>Código Postal</label>
                 <div class="cp-group">
-                    <input type="text" id="cp1" maxlength="4" placeholder="0000">
+                    <input type="text" id="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos">
                     <span>-</span>
-                    <input type="text" id="cp2" maxlength="3" placeholder="000">
+                    <input type="text" id="cp2" maxlength="3" placeholder="000" aria-label="Código Postal, últimos 3 dígitos">
                 </div>
             </div>
             <div class="col form-group">
@@ -226,7 +226,7 @@
 
         <div class="row">
             <div class="col form-group">
-                <label>Data</label>
+                <label>Data (AAAA-MM-DD)</label>
                 <input type="date" name="data">
             </div>
             <div class="col form-group">
