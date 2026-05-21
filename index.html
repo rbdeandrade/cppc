@@ -92,7 +92,8 @@
         letter-spacing: 5px;
     }
     .aderente-box input:focus {
-        outline: none;
+        outline: 2px solid #0066cc;
+        outline-offset: 1px;
     }
 
     /* General Form Fields (Left Aligned) */
@@ -173,13 +174,13 @@
             <p>Conselho Português para a Paz e Cooperação</p>
             
             <div class="aderente-box">
-                <label for="numero_aderente">Nº. de Aderente</label>
-                <input type="text" id="numero_aderente" name="numero_aderente" aria-label="Número de Aderente">
+                <label id="numero_aderente_label" for="numero_aderente">Nº. de Aderente</label>
+                <input type="text" id="numero_aderente" name="numero_aderente" aria-labelledby="numero_aderente_label">
             </div>
         </div>
     </div>
 
-    <form action="/" method="post">
+    <form action="/submit-membership" method="post">
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome">
@@ -194,9 +195,9 @@
             <div class="col form-group col-postal">
                 <label for="cp1">Código Postal</label>
                 <div class="cp-group">
-                    <input type="text" id="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" id="cp1" name="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos" inputmode="numeric" pattern="[0-9]*">
                     <span>-</span>
-                    <input type="text" id="cp2" maxlength="3" placeholder="000" aria-label="Código Postal, últimos 3 dígitos" inputmode="numeric" pattern="[0-9]*">
+                    <input type="text" id="cp2" name="cp2" maxlength="3" placeholder="000" aria-label="Código Postal, últimos 3 dígitos" inputmode="numeric" pattern="[0-9]*">
                 </div>
             </div>
             <div class="col form-group">
