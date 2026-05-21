@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Aderente - CPPC</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+    }
+    .form-container {
+        max-width: 800px;
+        background: #fff;
+        padding: 40px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    /* Top Header Layout */
+    .header-layout {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 20px;
+    }
+    .header-left {
+        flex: 1;
+    }
+    .header-left img {
+        max-width: 250px;
+        height: auto;
+    }
+    .header-right {
+        flex: 1;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    /* Typography */
+    .header-right h1 {
+        margin: 0;
+        color: #888;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .header-right h1 strong {
+        color: #555;
+    }
+    .header-right h2 {
+        margin: 5px 0;
+        color: #888;
+        font-size: 22px;
+        font-weight: normal;
+    }
+    .header-right h2 strong {
+        color: #555;
+    }
+    .header-right p {
+        margin: 5px 0 15px 0;
+        color: #999;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    /* Aderente Number Specific Box */
+    .aderente-box {
+        width: 250px;
+        border: 1px solid #888;
+    }
+    .aderente-box label {
+        display: block;
+        background-color: #888;
+        color: #fff;
+        text-align: left;
+        padding: 5px 8px;
+        margin: 0;
+        font-size: 14px;
+    }
+    .aderente-box input {
+        width: 100%;
+        border: none;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        letter-spacing: 5px;
+    }
+    .aderente-box input:focus {
+        outline: none;
+    }
+
+    /* General Form Fields (Left Aligned) */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #888;
+        font-size: 14px;
+    }
+    input[type="text"], 
+    input[type="email"], 
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    .row {
+        display: flex;
+        gap: 20px;
+    }
+    .col {
+        flex: 1;
+    }
+    
+    /* Postal Code Layout */
+    .col-postal {
+        flex: 0.3;
+    }
+    .cp-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .cp-group input {
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    #cp1 { width: 80px; }
+    #cp2 { width: 60px; }
+    
+    /* Footer */
+    .footer {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .signature-line {
+        width: 350px;
+        border-bottom: 1px solid #999;
+        padding-bottom: 5px;
+    }
+    .signature-label {
+        margin-top: 5px; 
+        color: #888; 
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    
+    <div class="header-layout">
+        <div class="header-left">
+            <img src="img/cppc.jpg" alt="Logo CPPC e pombas">
+        </div>
+        <div class="header-right">
+            <h1>Ficha de <strong>Aderente</strong></h1>
+            <h2>ou de <strong>Actualização de Dados</strong></h2>
+            <p>Conselho Português para a Paz e Cooperação</p>
+            
+            <div class="aderente-box">
+                <label>Nº. de Aderente</label>
+                <input type="text" name="numero_aderente">
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label>Nome</label>
+            <input type="text" name="nome">
+        </div>
+
+        <div class="form-group">
+            <label>Morada</label>
+            <input type="text" name="morada">
+        </div>
+
+        <div class="row">
+            <div class="col form-group col-postal">
+                <label>Código Postal</label>
+                <div class="cp-group">
+                    <input type="text" id="cp1" maxlength="4" placeholder="0000">
+                    <span>-</span>
+                    <input type="text" id="cp2" maxlength="3" placeholder="000">
+                </div>
+            </div>
+            <div class="col form-group">
+                <label>Localidade Postal</label>
+                <input type="text" name="localidade">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Profissão</label>
+            <input type="text" name="profissao">
+        </div>
+
+        <div class="row">
+            <div class="col form-group">
+                <label>Telefone</label>
+                <input type="text" name="telefone">
+            </div>
+            <div class="col form-group">
+                <label>Telemóvel</label>
+                <input type="text" name="telemovel">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" name="email">
+        </div>
+
+        <div class="row">
+            <div class="col form-group">
+                <label>Data</label>
+                <input type="date" name="data">
+            </div>
+            <div class="col form-group">
+                <label>Valor da Quota Anual</label>
+                <input type="text" name="quota_anual">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="signature-line">
+            </div>
+        </div>
+        <div class="signature-label">
+            Assinatura do Aderente
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
