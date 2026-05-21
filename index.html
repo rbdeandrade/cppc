@@ -107,6 +107,8 @@
         font-size: 14px;
     }
     input[type="text"], 
+    input[type="tel"], 
+    input[type="number"],
     input[type="email"], 
     input[type="date"] {
         width: 100%;
@@ -171,26 +173,26 @@
             <p>Conselho Português para a Paz e Cooperação</p>
             
             <div class="aderente-box">
-                <label>Nº. de Aderente</label>
-                <input type="text" name="numero_aderente">
+                <label for="numero_aderente">Nº. de Aderente</label>
+                <input type="text" id="numero_aderente" name="numero_aderente" aria-label="Número de Aderente">
             </div>
         </div>
     </div>
 
-    <form action="#" method="post">
+    <form action="" method="post">
         <div class="form-group">
-            <label>Nome</label>
-            <input type="text" name="nome">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
         </div>
 
         <div class="form-group">
-            <label>Morada</label>
-            <input type="text" name="morada">
+            <label for="morada">Morada</label>
+            <input type="text" id="morada" name="morada">
         </div>
 
         <div class="row">
             <div class="col form-group col-postal">
-                <label>Código Postal</label>
+                <label for="cp1">Código Postal</label>
                 <div class="cp-group">
                     <input type="text" id="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos">
                     <span>-</span>
@@ -198,40 +200,40 @@
                 </div>
             </div>
             <div class="col form-group">
-                <label>Localidade Postal</label>
-                <input type="text" name="localidade">
+                <label for="localidade">Localidade Postal</label>
+                <input type="text" id="localidade" name="localidade">
             </div>
         </div>
 
         <div class="form-group">
-            <label>Profissão</label>
-            <input type="text" name="profissao">
+            <label for="profissao">Profissão</label>
+            <input type="text" id="profissao" name="profissao">
         </div>
 
         <div class="row">
             <div class="col form-group">
-                <label>Telefone</label>
-                <input type="text" name="telefone">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone">
             </div>
             <div class="col form-group">
-                <label>Telemóvel</label>
-                <input type="text" name="telemovel">
+                <label for="telemovel">Telemóvel</label>
+                <input type="tel" id="telemovel" name="telemovel">
             </div>
         </div>
 
         <div class="form-group">
-            <label>E-mail</label>
-            <input type="email" name="email">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
         </div>
 
         <div class="row">
             <div class="col form-group">
-                <label>Data (AAAA-MM-DD)</label>
-                <input type="date" name="data">
+                <label for="data">Data (AAAA-MM-DD)</label>
+                <input type="date" id="data" name="data">
             </div>
             <div class="col form-group">
-                <label>Valor da Quota Anual</label>
-                <input type="text" name="quota_anual">
+                <label for="quota_anual">Valor da Quota Anual</label>
+                <input type="number" id="quota_anual" name="quota_anual" min="0" step="0.01">
             </div>
         </div>
 
