@@ -179,7 +179,7 @@
         </div>
     </div>
 
-    <form action="" method="post">
+    <form action="/" method="post">
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome">
@@ -194,9 +194,9 @@
             <div class="col form-group col-postal">
                 <label for="cp1">Código Postal</label>
                 <div class="cp-group">
-                    <input type="text" id="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos">
+                    <input type="text" id="cp1" maxlength="4" placeholder="0000" aria-label="Código Postal, primeiros 4 dígitos" inputmode="numeric" pattern="[0-9]*">
                     <span>-</span>
-                    <input type="text" id="cp2" maxlength="3" placeholder="000" aria-label="Código Postal, últimos 3 dígitos">
+                    <input type="text" id="cp2" maxlength="3" placeholder="000" aria-label="Código Postal, últimos 3 dígitos" inputmode="numeric" pattern="[0-9]*">
                 </div>
             </div>
             <div class="col form-group">
@@ -228,7 +228,7 @@
 
         <div class="row">
             <div class="col form-group">
-                <label for="data">Data (AAAA-MM-DD)</label>
+                <label for="data">Data</label>
                 <input type="date" id="data" name="data">
             </div>
             <div class="col form-group">
